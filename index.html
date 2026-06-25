@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual Monitoreo Procesos LISTO</title>
+  <style>
+    :root {
+      --bg: #f3f6f8;
+      --paper: #ffffff;
+      --ink: #182230;
+      --muted: #627083;
+      --line: #d8e2ec;
+      --brand: #105f80;
+      --accent: #0f766e;
+      --soft: #eef8fb;
+      --warn: #fff4d6;
+      --danger: #fdecec;
+      --code: #111827;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.58;
+    }
+
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .document {
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 18px 46px rgba(18, 31, 53, .12);
+    }
+
+    header {
+      padding: 42px 48px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(16, 95, 128, .96), rgba(15, 118, 110, .96)),
+        linear-gradient(90deg, #105f80, #0f766e);
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    header p {
+      max-width: 830px;
+      margin: 0;
+      font-size: 17px;
+      opacity: .96;
+    }
+
+    main {
+      padding: 36px 48px 48px;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      display: block;
+      padding: 12px 14px;
+      color: var(--brand);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 34px 0 12px;
+      padding-bottom: 9px;
+      color: var(--brand);
+      border-bottom: 2px solid var(--line);
+      font-size: 23px;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: #27364a;
+      font-size: 17px;
+    }
+
+    p { margin: 8px 0 12px; }
+
+    ul, ol { padding-left: 24px; }
+    li { margin: 5px 0; }
+
+    code {
+      padding: 2px 5px;
+      background: #eef2f7;
+      border-radius: 4px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 92%;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 15px 16px;
+      color: #f8fafc;
+      background: var(--code);
+      border-radius: 8px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      color: #fff;
+      background: var(--brand);
+      text-align: left;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .note {
+      margin: 16px 0;
+      padding: 14px 16px;
+      border-left: 5px solid var(--brand);
+      background: var(--soft);
+      border-radius: 6px;
+    }
+
+    .warn {
+      border-left-color: #d97706;
+      background: var(--warn);
+    }
+
+    .danger {
+      border-left-color: #c0392b;
+      background: var(--danger);
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    @media (max-width: 820px) {
+      .shell { padding: 0; }
+      .document { border: 0; border-radius: 0; }
+      header, main { padding: 28px 22px; }
+      nav, .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 30px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .shell { padding: 0; }
+      .document { border: 0; box-shadow: none; }
+      header { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      nav { display: none; }
+      pre { white-space: pre-wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <article class="document">
+      <header>
+        <div class="eyebrow">Manual operativo</div>
+        <h1>Automatizacion Monitoreo Procesos LISTO</h1>
+        <p>Guia para instalar, ejecutar y validar la automatizacion de revision de procesos LISTO en equipos Windows, incluyendo VPN, evidencias locales y consideraciones de SharePoint/OneDrive.</p>
+      </header>
+
+      <main>
+        <nav aria-label="Contenido">
+          <a href="#objetivo">Objetivo</a>
+          <a href="#instalacion">Instalacion</a>
+          <a href="#vpn">VPN</a>
+          <a href="#ejecucion">Ejecucion</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#sharepoint">SharePoint</a>
+        </nav>
+
+        <section id="objetivo">
+          <h2>1. Objetivo</h2>
+          <p>Esta automatizacion revisa el estado de procesos publicados por servidores LISTO, detecta novedades, guarda evidencia HTML y deja la informacion organizada para seguimiento operativo.</p>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Entrada</h3>
+              <p>Paginas HTML publicadas por servidores LISTO en <code>/ProcesosListo/procesos2.html</code>.</p>
+            </div>
+            <div class="card">
+              <h3>Salida</h3>
+              <p>Archivos HTML por servidor dentro de <code>Reportes_Monitoreo</code>.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>2. Que revisa</h2>
+          <p>El script consulta servidores internos y externos:</p>
+          <pre>172.16.11.7
+172.16.12.7
+172.16.13.7
+...
+172.16.28.7
+listo-interno.listoonline.co
+listo24clientes.listoonline.co</pre>
+
+          <p>Busca estados que puedan indicar novedad:</p>
+          <pre>sin va
+sin es
+sin po
+sin so</pre>
+
+          <p>Si el caso coincide con una excepcion definida en el codigo, no se reporta como alerta.</p>
+        </section>
+
+        <section id="instalacion">
+          <h2>3. Paquete de instalacion</h2>
+          <p>La USB debe llevar una carpeta llamada <code>procesoAM</code> con estos archivos:</p>
+          <pre>procesoAM
+|-- proceso.py
+|-- proceso2.py
+|-- ejecutar.bat
+|-- requirements.txt
+|-- MANUAL_INSTALACION.md
+|-- MANUAL_INSTALACION.txt
+`-- MANUAL_EQUIPO.html</pre>
+
+          <h3>Instalacion desde USB</h3>
+          <ol>
+            <li>Crear la carpeta <code>C:\Automatizaciones</code>.</li>
+            <li>Copiar <code>procesoAM</code> desde la USB hacia <code>C:\Automatizaciones</code>.</li>
+            <li>Validar que exista <code>C:\Automatizaciones\procesoAM\proceso.py</code>.</li>
+            <li>Instalar Python si el equipo no lo tiene.</li>
+            <li>Instalar dependencias.</li>
+          </ol>
+
+          <pre>cd C:\Automatizaciones\procesoAM
+python --version
+python -m pip install -r requirements.txt</pre>
+        </section>
+
+        <section id="vpn">
+          <h2>4. Validacion de VPN</h2>
+          <p>Los servidores <code>172.16.x.x</code> son internos. Para consultarlos se necesita VPN o red corporativa.</p>
+          <pre>Test-NetConnection 172.16.11.7 -Port 80</pre>
+          <div class="note"><strong>Correcto:</strong> <code>TcpTestSucceeded : True</code>.</div>
+          <div class="note danger"><strong>Incorrecto:</strong> <code>TcpTestSucceeded : False</code>. Conectar VPN y repetir la prueba.</div>
+        </section>
+
+        <section id="ejecucion">
+          <h2>5. Ejecucion diaria</h2>
+          <h3>Opcion recomendada</h3>
+          <p>Dar doble clic en:</p>
+          <pre>C:\Automatizaciones\procesoAM\ejecutar.bat</pre>
+
+          <h3>Opcion PowerShell</h3>
+          <pre>cd C:\Automatizaciones\procesoAM
+python proceso.py</pre>
+        </section>
+
+        <section id="resultados">
+          <h2>6. Resultados</h2>
+          <p>Los resultados quedan en:</p>
+          <pre>C:\Automatizaciones\procesoAM\Reportes_Monitoreo</pre>
+
+          <p>Estructura esperada:</p>
+          <pre>Reportes_Monitoreo
+`-- 2026-06-25
+    `-- primera revision
+        |-- server 11.html
+        |-- server 12.html
+        |-- ...
+        |-- listoaws.html
+        `-- listo24clientes.html</pre>
+        </section>
+
+        <section id="sharepoint">
+          <h2>7. SharePoint, OneDrive y Power Automate</h2>
+          <div class="note warn">
+            <strong>Importante:</strong> el script Python no sube archivos directamente a SharePoint.
+          </div>
+          <p>Si la evidencia aparece automaticamente en SharePoint, esa parte la realiza una configuracion externa de OneDrive o Power Automate.</p>
+          <table>
+            <tr><th>Componente</th><th>Responsabilidad</th></tr>
+            <tr><td><code>proceso.py</code></td><td>Consulta servidores y guarda archivos localmente.</td></tr>
+            <tr><td>OneDrive</td><td>Sincroniza una carpeta local con SharePoint si esta configurado.</td></tr>
+            <tr><td>Power Automate</td><td>Puede copiar o mover archivos hacia SharePoint mediante un flujo.</td></tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>8. Errores frecuentes</h2>
+          <table>
+            <tr><th>Error</th><th>Causa</th><th>Solucion</th></tr>
+            <tr>
+              <td><code>can't open file C:\Users\...\proceso.py</code></td>
+              <td>PowerShell esta en otra carpeta.</td>
+              <td>Ejecutar <code>cd C:\Automatizaciones\procesoAM</code>.</td>
+            </tr>
+            <tr>
+              <td><code>Could not open requirements file</code></td>
+              <td>No esta en la carpeta del proyecto.</td>
+              <td>Entrar al proyecto e instalar dependencias.</td>
+            </tr>
+            <tr>
+              <td><code>connection timed out</code></td>
+              <td>No hay VPN o el servidor no responde.</td>
+              <td>Validar VPN con <code>Test-NetConnection</code>.</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>9. Checklist</h2>
+          <pre>[ ] Carpeta C:\Automatizaciones creada.
+[ ] Carpeta procesoAM copiada.
+[ ] Existe proceso.py.
+[ ] Existe ejecutar.bat.
+[ ] Existe requirements.txt.
+[ ] Python instalado.
+[ ] Dependencias instaladas.
+[ ] VPN conectada.
+[ ] Test-NetConnection responde True.
+[ ] ejecutar.bat corre correctamente.
+[ ] Se crea Reportes_Monitoreo.
+[ ] Si aplica, SharePoint/OneDrive sincroniza la evidencia.</pre>
+        </section>
+
+        <section>
+          <h2>10. Comandos rapidos</h2>
+          <pre>cd C:\Automatizaciones\procesoAM
+python -m pip install -r requirements.txt
+python proceso.py
+Test-NetConnection 172.16.11.7 -Port 80
+explorer C:\Automatizaciones\procesoAM\Reportes_Monitoreo</pre>
+        </section>
+
+        <div class="footer">
+          Documento interno para instalacion y operacion de la automatizacion de monitoreo de procesos LISTO.
+        </div>
+      </main>
+    </article>
+  </div>
+</body>
+</html>

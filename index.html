@@ -225,7 +225,14 @@ python -m pip install -r requirements.txt</pre>
           <h3>Opcion recomendada</h3>
           <p>Dar doble clic en:</p>
           <pre>C:\Automatizaciones\ProcesoAM\ejecutar.bat</pre>
-          <p>El BAT pregunta si es primera o segunda revision.</p>
+          <p>El BAT pregunta si es primera o segunda revision. Se debe escribir <code>1</code> o <code>2</code> y presionar Enter.</p>
+          <pre>Seleccione el tipo de revision:
+1. Primera revision
+2. Segunda revision
+Opcion [1/2]:</pre>
+          <div class="note">
+            <strong>Detalle tecnico:</strong> el BAT envia <code>primera revision</code> o <code>segunda revision</code> sin acentos. <code>proceso2.py</code> convierte ese texto internamente a <code>primera revisión</code> o <code>segunda revisión</code> para crear la carpeta correcta.
+          </div>
           <h3>Opcion PowerShell</h3>
           <pre>cd C:\Automatizaciones\ProcesoAM
 python proceso2.py</pre>
@@ -276,6 +283,11 @@ resumen_estado.txt</pre>
               <td><code>ModuleNotFoundError</code></td>
               <td>Faltan librerias.</td>
               <td>Ejecutar <code>python -m pip install -r requirements.txt</code>.</td>
+            </tr>
+            <tr>
+              <td><code>"cho" no se reconoce</code> o <code>"f" no se reconoce</code></td>
+              <td>El archivo BAT quedo mal guardado o con saltos de linea incorrectos.</td>
+              <td>Usar la version actual de <code>ejecutar.bat</code> incluida en el paquete.</td>
             </tr>
             <tr>
               <td><code>connection timed out</code></td>

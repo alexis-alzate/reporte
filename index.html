@@ -19,9 +19,7 @@
       --ok: #e9f8ef;
       --code: #111827;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       color: var(--ink);
@@ -29,13 +27,7 @@
       font-family: "Segoe UI", Arial, sans-serif;
       line-height: 1.58;
     }
-
-    .shell {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 28px;
-    }
-
+    .shell { max-width: 1120px; margin: 0 auto; padding: 28px; }
     .document {
       overflow: hidden;
       background: var(--paper);
@@ -43,15 +35,11 @@
       border-radius: 10px;
       box-shadow: 0 18px 46px rgba(18, 31, 53, .12);
     }
-
     header {
       padding: 42px 48px;
       color: #fff;
-      background:
-        linear-gradient(135deg, rgba(16, 95, 128, .96), rgba(15, 118, 110, .96)),
-        linear-gradient(90deg, #105f80, #0f766e);
+      background: linear-gradient(135deg, #105f80, #0f766e);
     }
-
     .eyebrow {
       margin-bottom: 10px;
       font-size: 13px;
@@ -60,30 +48,15 @@
       text-transform: uppercase;
       opacity: .9;
     }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 38px;
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-
-    header p {
-      max-width: 860px;
-      margin: 0;
-      font-size: 17px;
-      opacity: .96;
-    }
-
+    h1 { margin: 0 0 12px; font-size: 38px; line-height: 1.08; }
+    header p { max-width: 880px; margin: 0; font-size: 17px; opacity: .96; }
     main { padding: 36px 48px 48px; }
-
     nav {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 30px;
     }
-
     nav a {
       display: block;
       padding: 12px 14px;
@@ -94,7 +67,6 @@
       background: #fbfdff;
       font-weight: 600;
     }
-
     h2 {
       margin: 34px 0 12px;
       padding-bottom: 9px;
@@ -102,17 +74,10 @@
       border-bottom: 2px solid var(--line);
       font-size: 23px;
     }
-
-    h3 {
-      margin: 22px 0 8px;
-      color: #27364a;
-      font-size: 17px;
-    }
-
+    h3 { margin: 22px 0 8px; color: #27364a; font-size: 17px; }
     p { margin: 8px 0 12px; }
     ul, ol { padding-left: 24px; }
     li { margin: 5px 0; }
-
     code {
       padding: 2px 5px;
       background: #eef2f7;
@@ -120,7 +85,6 @@
       font-family: Consolas, "Courier New", monospace;
       font-size: 92%;
     }
-
     pre {
       overflow-x: auto;
       padding: 15px 16px;
@@ -131,77 +95,23 @@
       font-size: 13px;
       line-height: 1.5;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0 20px;
-      font-size: 14px;
-    }
-
-    th, td {
-      padding: 11px 12px;
-      border: 1px solid var(--line);
-      vertical-align: top;
-    }
-
-    th {
-      color: #fff;
-      background: var(--brand);
-      text-align: left;
-    }
-
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; }
+    th, td { padding: 11px 12px; border: 1px solid var(--line); vertical-align: top; }
+    th { color: #fff; background: var(--brand); text-align: left; }
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
       margin: 18px 0;
     }
-
-    .card {
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-    }
-
+    .card { padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
     .card h3 { margin-top: 0; }
-
-    .note {
-      margin: 16px 0;
-      padding: 14px 16px;
-      border-left: 5px solid var(--brand);
-      background: var(--soft);
-      border-radius: 6px;
-    }
-
-    .warn {
-      border-left-color: #d97706;
-      background: var(--warn);
-    }
-
-    .danger {
-      border-left-color: #c0392b;
-      background: var(--danger);
-    }
-
-    .ok {
-      border-left-color: #12805c;
-      background: var(--ok);
-    }
-
-    .footer {
-      margin-top: 36px;
-      padding-top: 18px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      font-size: 13px;
-    }
-
-    @media (max-width: 900px) {
-      nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
+    .note { margin: 16px 0; padding: 14px 16px; border-left: 5px solid var(--brand); background: var(--soft); border-radius: 6px; }
+    .warn { border-left-color: #d97706; background: var(--warn); }
+    .danger { border-left-color: #c0392b; background: var(--danger); }
+    .ok { border-left-color: #12805c; background: var(--ok); }
+    .footer { margin-top: 36px; padding-top: 18px; color: var(--muted); border-top: 1px solid var(--line); font-size: 13px; }
+    @media (max-width: 900px) { nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 700px) {
       .shell { padding: 0; }
       .document { border: 0; border-radius: 0; }
@@ -209,7 +119,6 @@
       nav, .grid { grid-template-columns: 1fr; }
       h1 { font-size: 30px; }
     }
-
     @media print {
       body { background: #fff; }
       .shell { padding: 0; }
@@ -226,190 +135,110 @@
       <header>
         <div class="eyebrow">Manual operativo actualizado</div>
         <h1>Automatizacion Monitoreo Procesos LISTO</h1>
-        <p>Guia para instalar, operar y entender el flujo completo: Python genera la evidencia, Power Automate Desktop coordina el proceso, OneDrive sincroniza y SharePoint almacena los resultados.</p>
+        <p>Version actual: sin Power Automate. Python revisa servidores, genera evidencias, crea carpetas por fecha y copia los archivos a OneDrive para que se sincronicen con SharePoint.</p>
       </header>
 
       <main>
         <nav aria-label="Contenido">
-          <a href="#arquitectura">Arquitectura</a>
+          <a href="#flujo">Flujo Actual</a>
           <a href="#instalacion">Instalacion</a>
-          <a href="#power-automate">Power Automate</a>
           <a href="#onedrive">OneDrive</a>
           <a href="#ejecucion">Ejecucion</a>
           <a href="#resultados">Resultados</a>
           <a href="#errores">Errores</a>
           <a href="#checklist">Checklist</a>
+          <a href="#comandos">Comandos</a>
         </nav>
 
-        <section id="arquitectura">
-          <h2>1. Arquitectura real del proceso</h2>
-          <p>Este proceso no es solo un archivo Python. Es una automatizacion compuesta por varias piezas.</p>
-          <pre>Python
-  -> revisa servidores LISTO
-  -> genera HTML y resumen local
-
-Power Automate Desktop
-  -> ejecuta proceso2.py
-  -> crea carpetas
-  -> copia evidencias
-
-OneDrive corporativo
-  -> sincroniza la carpeta local con SharePoint
-
-SharePoint
-  -> almacena la evidencia para el equipo</pre>
-
+        <section id="flujo">
+          <h2>1. Flujo actual</h2>
+          <p>El proceso ya no necesita Power Automate Desktop para copiar archivos a SharePoint.</p>
+          <pre>proceso2.py
+  -> consulta servidores LISTO
+  -> genera Reportes_Monitoreo
+  -> crea carpeta Año / Mes / Fecha / Revisión en OneDrive
+  -> limpia archivos anteriores de esa revision
+  -> copia archivos nuevos
+  -> OneDrive sincroniza con SharePoint</pre>
           <div class="note ok">
-            <strong>Punto clave:</strong> Power Automate ejecuta <code>proceso2.py</code>. Ese es el archivo critico para el flujo.
+            <strong>Archivo principal:</strong> ejecutar <code>proceso2.py</code> o usar <code>ejecutar.bat</code>.
           </div>
         </section>
 
         <section>
-          <h2>2. Que revisa Python</h2>
-          <p>El script consulta paginas HTML publicadas por servidores LISTO:</p>
+          <h2>2. Que revisa</h2>
+          <p>El script consulta:</p>
           <pre>http://172.16.11.7/ProcesosListo/procesos2.html
-http://172.16.12.7/ProcesosListo/procesos2.html
 ...
 http://172.16.28.7/ProcesosListo/procesos2.html
 https://listo-interno.listoonline.co/ProcesosListo/procesos2.html
 https://listo24clientes.listoonline.co/ProcesosListo/procesos2.html</pre>
-
           <p>Busca estados de alerta:</p>
           <pre>sin va
 sin es
 sin po
 sin so</pre>
-
-          <p>Si el caso esta en la lista de excepciones, no se reporta como novedad.</p>
+          <p>Los casos definidos como excepciones no se reportan como novedad.</p>
         </section>
 
         <section id="instalacion">
-          <h2>3. Instalacion en un equipo</h2>
-          <p>La carpeta del proyecto debe quedar en esta ruta, respetando el nombre usado por Power Automate:</p>
+          <h2>3. Instalacion por equipo</h2>
+          <p>Copiar la carpeta del proyecto en:</p>
           <pre>C:\Automatizaciones\ProcesoAM</pre>
-
           <p>Archivos minimos:</p>
           <pre>ProcesoAM
 |-- proceso2.py
 |-- proceso.py
 |-- ejecutar.bat
-|-- requirements.txt
-`-- manuales</pre>
-
-          <h3>Instalar Python y dependencias</h3>
+`-- requirements.txt</pre>
+          <p>Instalar dependencias:</p>
           <pre>cd C:\Automatizaciones\ProcesoAM
 python --version
 python -m pip install -r requirements.txt</pre>
-
           <div class="note warn">
-            <strong>Importante:</strong> si <code>python --version</code> no responde, Power Automate tampoco podra ejecutar el flujo.
+            <strong>Importante:</strong> si <code>python --version</code> no responde, primero se debe instalar Python.
           </div>
         </section>
 
         <section>
           <h2>4. VPN</h2>
-          <p>Los servidores <code>172.16.x.x</code> son internos. Para consultarlos se necesita VPN o red corporativa.</p>
+          <p>Los servidores <code>172.16.x.x</code> son internos. Para consultarlos se requiere VPN o red corporativa.</p>
           <pre>Test-NetConnection 172.16.11.7 -Port 80</pre>
           <div class="note ok"><strong>Correcto:</strong> <code>TcpTestSucceeded : True</code>.</div>
           <div class="note danger"><strong>Incorrecto:</strong> <code>TcpTestSucceeded : False</code>. Conectar VPN y repetir.</div>
         </section>
 
-        <section id="power-automate">
-          <h2>5. Que hace Power Automate Desktop</h2>
-          <p>El flujo se llama:</p>
-          <pre>proceso</pre>
-
-          <p>Tipo:</p>
-          <pre>Power Automate Desktop</pre>
-
-          <p>Entorno visto:</p>
-          <pre>PLAY TECHNOLOGIES S.A.S (default)</pre>
-
-          <h3>Comando exacto confirmado</h3>
-          <pre>cmd.exe /c python "C:\Automatizaciones\ProcesoAM\proceso2.py"</pre>
-
-          <p>Ese comando significa que Power Automate depende de tres cosas:</p>
-          <ul>
-            <li>Python debe estar instalado y disponible como <code>python</code>.</li>
-            <li>Debe existir <code>C:\Automatizaciones\ProcesoAM\proceso2.py</code>.</li>
-            <li>Deben estar instaladas las librerias de <code>requirements.txt</code>.</li>
-          </ul>
-
-          <h3>Acciones principales del flujo</h3>
-          <pre>1. Obtener USERPROFILE.
-2. Armar RutaSharePoint.
-3. Obtener fecha actual.
-4. Crear MesCarpeta con formato MM.MMMM.
-5. Crear FechaSubcarpeta con formato yyyy-MM-dd.
-6. Ejecutar proceso2.py.
-7. Esperar.
-8. Crear carpetas locales.
-9. Obtener archivos HTML generados.
-10. Leer resumen_estado.txt.
-11. Crear carpetas en OneDrive.
-12. Copiar archivos a OneDrive.
-13. OneDrive sincroniza con SharePoint.</pre>
-        </section>
-
         <section id="onedrive">
-          <h2>6. OneDrive y SharePoint</h2>
-          <p>La ruta corporativa detectada es:</p>
-          <pre>%USERPROFILE%\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM\2026</pre>
-
-          <p>Ejemplo en un equipo:</p>
-          <pre>C:\Users\Desarrollo\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM\2026</pre>
-
-          <p>Estructura esperada:</p>
-          <pre>Área de Soporte - Monitoreo 7AM
-`-- 2026
-    |-- 01.Enero
-    |-- 02.Febrero
-    |-- 03.Marzo
-    |-- 04.Abril
-    |-- 05.Mayo
-    |-- 06.junio
-    `-- 07.Julio</pre>
-
+          <h2>5. OneDrive y SharePoint</h2>
+          <p>El script copia a la carpeta local sincronizada de OneDrive:</p>
+          <pre>%USERPROFILE%\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM</pre>
+          <p>Ejemplo:</p>
+          <pre>C:\Users\Desarrollo\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM</pre>
+          <p>Si esa carpeta existe y OneDrive esta sincronizando, lo que Python copie alli aparece en SharePoint.</p>
           <div class="note">
-            <strong>Como sube a SharePoint:</strong> Power Automate copia a la carpeta local de OneDrive. Luego OneDrive se encarga de sincronizar hacia SharePoint.
+            <strong>No se guardan credenciales en Python:</strong> OneDrive sube usando la sesion corporativa del usuario.
           </div>
         </section>
 
         <section id="ejecucion">
-          <h2>7. Ejecucion correcta</h2>
-          <h3>Prueba manual de Python</h3>
+          <h2>6. Ejecucion</h2>
+          <h3>Opcion recomendada</h3>
+          <p>Dar doble clic en:</p>
+          <pre>C:\Automatizaciones\ProcesoAM\ejecutar.bat</pre>
+          <p>El BAT pregunta si es primera o segunda revision.</p>
+          <h3>Opcion PowerShell</h3>
           <pre>cd C:\Automatizaciones\ProcesoAM
 python proceso2.py</pre>
-
-          <p>Debe crear una carpeta como:</p>
-          <pre>C:\Automatizaciones\ProcesoAM\Reportes_Monitoreo\2026-06-30\primera revisión</pre>
-
-          <h3>Ejecucion completa</h3>
-          <p>Luego se ejecuta el flujo <code>proceso</code> en Power Automate Desktop.</p>
+          <p>Para segunda revision:</p>
+          <pre>python proceso2.py "segunda revisión"</pre>
         </section>
 
         <section id="resultados">
-          <h2>8. Resultados y rutas</h2>
-          <table>
-            <tr><th>Etapa</th><th>Ruta</th></tr>
-            <tr>
-              <td>Python genera</td>
-              <td><code>C:\Automatizaciones\ProcesoAM\Reportes_Monitoreo\FECHA\primera revisión</code></td>
-            </tr>
-            <tr>
-              <td>Power Automate organiza local</td>
-              <td><code>C:\Automatizaciones\ProcesoAM\MES\FECHA\REVISION</code></td>
-            </tr>
-            <tr>
-              <td>Power Automate copia a OneDrive</td>
-              <td><code>%USERPROFILE%\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM\2026\MES\FECHA\REVISION</code></td>
-            </tr>
-            <tr>
-              <td>OneDrive sincroniza</td>
-              <td>SharePoint / Area de Soporte - Monitoreo 7AM</td>
-            </tr>
-          </table>
-
+          <h2>7. Resultados</h2>
+          <p>Salida local:</p>
+          <pre>C:\Automatizaciones\ProcesoAM\Reportes_Monitoreo\2026-06-30\primera revisión</pre>
+          <p>Salida sincronizada:</p>
+          <pre>C:\Users\USUARIO\OneDrive - PLAY TECHNOLOGIES S.A.S\Área de Soporte - Monitoreo 7AM\2026\06.junio\2026-06-30\primera revisión</pre>
           <p>Archivos esperados:</p>
           <pre>server 11.html
 server 12.html
@@ -419,16 +248,24 @@ listoaws.html
 listo24clientes.html
 cuerpo_correo.html
 resumen_estado.txt</pre>
+          <div class="note ok">
+            <strong>Reemplazo limpio:</strong> antes de copiar a OneDrive, el script borra los archivos existentes de esa revision y copia la version nueva.
+          </div>
         </section>
 
         <section id="errores">
-          <h2>9. Errores comunes</h2>
+          <h2>8. Errores comunes</h2>
           <table>
             <tr><th>Error</th><th>Causa</th><th>Solucion</th></tr>
             <tr>
-              <td><code>can't open file ... proceso2.py</code></td>
-              <td>La ruta no existe o la carpeta se llamo diferente.</td>
-              <td>Validar <code>C:\Automatizaciones\ProcesoAM\proceso2.py</code>.</td>
+              <td>No aparece en SharePoint</td>
+              <td>OneDrive no ha sincronizado o se esta mirando otro mes.</td>
+              <td>Revisar la carpeta local de OneDrive y esperar sincronizacion.</td>
+            </tr>
+            <tr>
+              <td>Se miro Julio pero no aparece nada</td>
+              <td>La fecha actual aun es junio.</td>
+              <td>Buscar en <code>2026\06.junio\2026-06-30</code>.</td>
             </tr>
             <tr>
               <td><code>python no se reconoce</code></td>
@@ -445,45 +282,39 @@ resumen_estado.txt</pre>
               <td>No hay VPN o el servidor no responde.</td>
               <td>Validar VPN con <code>Test-NetConnection</code>.</td>
             </tr>
-            <tr>
-              <td>No aparece en SharePoint</td>
-              <td>OneDrive no esta sincronizando o no esta la biblioteca.</td>
-              <td>Revisar OneDrive corporativo y carpeta <code>Área de Soporte - Monitoreo 7AM</code>.</td>
-            </tr>
           </table>
         </section>
 
         <section id="checklist">
-          <h2>10. Checklist de instalacion</h2>
+          <h2>9. Checklist</h2>
           <pre>[ ] Python instalado.
 [ ] python --version responde.
-[ ] Carpeta C:\Automatizaciones\ProcesoAM creada.
+[ ] C:\Automatizaciones\ProcesoAM existe.
 [ ] proceso2.py existe.
 [ ] requirements.txt existe.
 [ ] Dependencias instaladas.
 [ ] VPN conectada.
 [ ] OneDrive corporativo iniciado.
 [ ] Carpeta Área de Soporte - Monitoreo 7AM sincronizada.
-[ ] Power Automate Desktop instalado.
-[ ] Flujo proceso disponible.
-[ ] El flujo ejecuta proceso2.py.
-[ ] Python genera Reportes_Monitoreo.
-[ ] Power Automate copia archivos a OneDrive.
-[ ] OneDrive sincroniza hacia SharePoint.</pre>
+[ ] ejecutar.bat corre.
+[ ] Se crea Reportes_Monitoreo.
+[ ] Se crea carpeta en OneDrive.
+[ ] SharePoint muestra la evidencia sincronizada.</pre>
         </section>
 
-        <section>
-          <h2>11. Comandos rapidos</h2>
+        <section id="comandos">
+          <h2>10. Comandos rapidos</h2>
           <pre>cd C:\Automatizaciones\ProcesoAM
 python --version
 python -m pip install -r requirements.txt
 python proceso2.py
+python proceso2.py "segunda revisión"
 Test-NetConnection 172.16.11.7 -Port 80
 explorer C:\Automatizaciones\ProcesoAM\Reportes_Monitoreo</pre>
         </section>
 
         <div class="footer">
-          Documento interno para instalacion y operacion de la automatizacion de monitoreo de procesos LISTO.
+          Version actualizada: Python + OneDrive. Power Automate ya no es requerido para copiar evidencias a SharePoint.
         </div>
       </main>
     </article>
